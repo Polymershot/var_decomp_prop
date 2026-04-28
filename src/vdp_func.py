@@ -45,7 +45,7 @@ def vdp(data: pd.DataFrame, intercept: bool, log_variables = None) -> pd.DataFra
     phi = np.sum(variance_components, axis=1).reshape(-1,1)
     pi = (variance_components / phi).T
     result = pd.DataFrame(data=pi, columns=df.columns)
-    scaled_condition_indexes = scaled_condition_indexes = scaled_condition_indexes.flatten().tolist()
+    scaled_condition_indexes = scaled_condition_indexes.flatten().tolist()
     result.insert(0, 'scaled_condition_indexes', scaled_condition_indexes)
     return result
 
