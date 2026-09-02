@@ -6,7 +6,7 @@ def vdp(data: pd.DataFrame, intercept: bool, log_variables = None) -> pd.DataFra
     """
     Computes the Variance Decomposition Proportions (V.D.P.) as illustrated in the following book: Besley (1991) "Conditioning Diagonostics. Collinearity and Weak Data in Regression". Wiley. 
     V.D.P. is meant to be a collineary diagnostic tool for linear regression. With this tool, you have a greater ability to see which variables are collinear with one another and to what degree.
-
+    *Uses code based on <https://theforce.hashnode.dev/variance-decomposition-proportions>
     Args:
         data (pd.DataFrame): A dataframe with only continuous input variables that are linear/log based. Data must be cleaned (e.g. no missing values). 
         intercept (bool): Indicate if you want to include an intercept term based on what you want to do with your regression analysis.
